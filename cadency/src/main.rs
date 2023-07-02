@@ -4,7 +4,7 @@ extern crate log;
 extern crate cadency_core;
 
 use cadency_commands::{
-    Fib, Inspire, Now, Pause, Ping, Play, Resume, Skip, Slap, Stop, TrackLoop, Tracks, Urban,
+    Fib, Inspire, Now, Pause, Ping, Jak, Resume, Skip, Slap, Stop, TrackLoop, Tracks, Urban,
 };
 use cadency_core::Cadency;
 use settings::CadencySettings;
@@ -24,7 +24,7 @@ async fn main() {
         Now::default(),
         Pause::default(),
         Ping::default(),
-        Play::new(
+        Jak::new(
             settings.play.playlist_song_limit,
             settings.play.song_length_limit
         ),

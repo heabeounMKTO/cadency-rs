@@ -21,14 +21,14 @@ use songbird::events::Event;
     description = "URL or search query like: 'Hey Jude Beatles'",
     kind = "String"
 )]
-pub struct Play {
+pub struct Jak {
     /// The maximum number of songs that can be added to the queue from a playlist
     playlist_song_limit: i32,
     /// The maximum length of a single song in seconds
     song_length_limit: f32,
 }
 
-impl Play {
+impl Jak {
     pub fn new(playlist_song_limit: i32, song_length_limit: f32) -> Self {
         Self {
             playlist_song_limit,
@@ -38,7 +38,7 @@ impl Play {
 }
 
 #[async_trait]
-impl CadencyCommand for Play {
+impl CadencyCommand for Jak {
     async fn execute<'a>(
         &self,
         ctx: &Context,
